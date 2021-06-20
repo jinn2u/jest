@@ -1,5 +1,5 @@
 {"mocked_Product" : {
-  "name ": "test_name",
-  "description": "test_desc",
-  "price": 1
+	"name": "test_name",
+	"description":"test_db",
+	"price": 1
 }}
