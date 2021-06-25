@@ -3,9 +3,8 @@ const app = express()
 const mongoose = require('mongoose')
 const PORT = 5000
 const HOST = '0,0,0,0'
-// const {USER_NAME, PASSWORD} = require('./config')
 require('dotenv').config()
-const productRoutes = require('./routes/product')
+const productRoutes = require('./routes/product-route')
 
 app.use(express.json())
 
@@ -29,7 +28,9 @@ app.get('/',(req, res)=>{
   res.send('Hello World')
 })
 
-
+app.use((error,req,res,next)=>{
+  res.status(500).json({message: error.message})
+})
 if(process.env.NODE_ENV !== 'test') {
   app.listen(PORT,()=>console.log(`server is running on http://localhost:${PORT}`))
 }

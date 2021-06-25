@@ -1,5 +1,7 @@
-{"mocked_Product" : {
+{
+  "mocked_Product" : {
 	"name": "test_name",
 	"description":"test_db",
 	"price": 1
-}}
+}
+}
